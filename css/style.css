@@ -848,3 +848,212 @@ html {
   border-color: #C9A15A;
   color: #C9A15A;
 }
+
+/* ---------- Contact form ---------- */
+.contact-card {
+  background: #F5F4F0;
+  border: 1px solid rgba(201,161,90,0.35);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  box-shadow: 0 20px 45px rgba(20,53,31,0.06);
+  text-align: left;
+}
+@media (min-width: 640px) {
+  .contact-card { padding: 2.25rem; }
+}
+
+.contact-textarea-wrap {
+  position: relative;
+}
+.contact-textarea {
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  background: #fff;
+  border: 1px solid rgba(201,161,90,0.4);
+  border-radius: 0.85rem;
+  padding: 1rem 3rem 1rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  color: #14351F;
+  line-height: 1.55;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.contact-textarea::placeholder { color: #8B8B8B; }
+.contact-textarea:focus {
+  outline: none;
+  border-color: #C9A15A;
+  box-shadow: 0 0 0 3px rgba(201,161,90,0.15);
+}
+
+.mic-btn {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: #14351F;
+  color: #F5F4F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+.mic-btn svg { width: 1.05rem; height: 1.05rem; }
+.mic-btn:hover { background: #1F4A2C; }
+.mic-btn.recording {
+  background: #C0392B;
+  animation: mic-pulse 1.4s ease-in-out infinite;
+}
+.mic-btn[hidden] { display: none; }
+@keyframes mic-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(192,57,43,0.45); }
+  50% { box-shadow: 0 0 0 8px rgba(192,57,43,0); }
+}
+
+.file-drop-zone {
+  margin-top: 1rem;
+  border: 1.5px dashed rgba(20,53,31,0.25);
+  border-radius: 0.85rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #8B8B8B;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.file-drop-zone:hover,
+.file-drop-zone.dragover {
+  border-color: #C9A15A;
+  background: rgba(201,161,90,0.06);
+}
+
+.file-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+.file-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  border: 1px solid rgba(20,53,31,0.12);
+  border-radius: 999px;
+  padding: 0.35rem 0.5rem 0.35rem 0.85rem;
+  font-size: 0.78rem;
+  color: #14351F;
+  max-width: 100%;
+}
+.file-chip span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 14rem;
+}
+.file-chip button {
+  flex-shrink: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 999px;
+  background: rgba(20,53,31,0.08);
+  color: #14351F;
+  font-size: 0.85rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file-chip button:hover { background: rgba(192,57,43,0.15); color: #C0392B; }
+
+/* Contact info modal */
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(11,32,19,0.55);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.contact-modal-overlay.hidden { display: none; }
+.contact-modal {
+  position: relative;
+  width: 100%;
+  max-width: 26rem;
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+}
+.contact-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #8B8B8B;
+}
+.contact-modal-close:hover { color: #14351F; }
+
+.contact-field {
+  margin-top: 1.25rem;
+}
+.contact-field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #14351F;
+  margin-bottom: 0.4rem;
+}
+.contact-field input {
+  width: 100%;
+  border: 1px solid rgba(20,53,31,0.2);
+  border-radius: 0.6rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9rem;
+  color: #14351F;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.contact-field input:focus {
+  outline: none;
+  border-color: #C9A15A;
+  box-shadow: 0 0 0 3px rgba(201,161,90,0.15);
+}
+.contact-field input.invalid {
+  border-color: #C0392B;
+}
+.contact-error {
+  display: none;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  color: #C0392B;
+}
+.contact-field.invalid .contact-error { display: block; }
+
+.contact-modal-status {
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+}
+.contact-modal-status.hidden { display: none; }
+.contact-modal-status.success {
+  background: rgba(31,74,44,0.1);
+  color: #14351F;
+}
+.contact-modal-status.error {
+  background: rgba(192,57,43,0.1);
+  color: #C0392B;
+}
