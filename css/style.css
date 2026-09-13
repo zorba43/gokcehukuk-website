@@ -862,7 +862,7 @@ html {
 .cta-strip-title {
   font-family: 'Fraunces', 'Playfair Display', serif;
   font-weight: 500;
-  font-size: clamp(1.75rem, 3.2vw, 2.125rem);
+  font-size: clamp(1.75rem, 3vw, 2rem);
   line-height: 1.35;
   color: #F5F4F0;
 }
@@ -885,9 +885,6 @@ html {
   .contact-card { padding: 2.25rem; }
 }
 
-.contact-textarea-wrap {
-  position: relative;
-}
 .contact-textarea {
   width: 100%;
   min-height: 140px;
@@ -895,7 +892,7 @@ html {
   background: #fff;
   border: 1px solid rgba(201,161,90,0.4);
   border-radius: 0.85rem;
-  padding: 1rem 3rem 1rem 1rem;
+  padding: 1rem;
   font-family: 'Inter', sans-serif;
   font-size: 0.92rem;
   color: #14351F;
@@ -907,32 +904,6 @@ html {
   outline: none;
   border-color: #C9A15A;
   box-shadow: 0 0 0 3px rgba(201,161,90,0.15);
-}
-
-.mic-btn {
-  position: absolute;
-  right: 0.85rem;
-  bottom: 0.85rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 999px;
-  background: #14351F;
-  color: #F5F4F0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.25s ease, transform 0.2s ease;
-}
-.mic-btn svg { width: 1.05rem; height: 1.05rem; }
-.mic-btn:hover { background: #1F4A2C; }
-.mic-btn.recording {
-  background: #C0392B;
-  animation: mic-pulse 1.4s ease-in-out infinite;
-}
-.mic-btn[hidden] { display: none; }
-@keyframes mic-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(192,57,43,0.45); }
-  50% { box-shadow: 0 0 0 8px rgba(192,57,43,0); }
 }
 
 .file-drop-zone {

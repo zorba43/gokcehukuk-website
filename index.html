@@ -210,15 +210,62 @@
   </div>
 </section>
 
-<!-- ============ ÖN İNCELEME CTA ŞERİDİ ============ -->
-<section class="cta-strip">
-  <div class="max-w-3xl mx-auto text-center">
+<!-- ============ İLETİŞİM / SORUNUZU BİLDİRİN ============ -->
+<section id="iletisim" class="cta-strip">
+  <div class="max-w-2xl mx-auto text-center">
     <h2 class="cta-strip-title">
       Sorununuzu <em>bildirin</em>, ön inceleme yapıp size 24 saat içerisinde dönüş sağlayalım.
     </h2>
-    <a href="#iletisim" class="hero-cta mt-8 inline-flex">Sorununuzu Bildirin</a>
+
+    <form id="contact-form" class="contact-card mt-8 text-left" novalidate>
+      <textarea id="contact-message" class="contact-textarea" placeholder="Hukuki sorununuzu kısaca anlatın..." rows="5"></textarea>
+
+      <div id="file-drop" class="file-drop-zone">
+        <input type="file" id="file-input" multiple hidden>
+        <p>Dosya eklemek için tıklayın veya sürükleyin</p>
+      </div>
+      <div id="file-list" class="file-list"></div>
+
+      <button type="submit" class="hero-cta w-full justify-center mt-2">Gönder</button>
+    </form>
+
+    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="tel:+902420000000" class="hero-cta hero-cta--outline">Hemen Arayın</a>
+      <a href="mailto:info@gokcehukuklaw.com" class="hero-cta hero-cta--outline">E-posta Gönderin</a>
+    </div>
+    <p class="mt-6 text-xs text-cream/50 italic">* İletişim bilgileri yer tutucudur — gerçek telefon/e-posta ile güncellenecektir.</p>
   </div>
 </section>
+
+<!-- ============ İLETİŞİM BİLGİSİ MODAL ============ -->
+<div id="contact-modal-overlay" class="contact-modal-overlay hidden">
+  <div class="contact-modal">
+    <button type="button" id="contact-modal-close" class="contact-modal-close" aria-label="Kapat">&times;</button>
+    <p class="eyebrow">Son Adım</p>
+    <h3 class="font-serif text-xl text-olive-dark">İletişim Bilgileriniz</h3>
+    <p class="mt-2 text-sm text-stone">Talebinizi iletebilmemiz için lütfen bilgilerinizi paylaşın.</p>
+
+    <div class="contact-field">
+      <label for="contact-name">Ad Soyad *</label>
+      <input type="text" id="contact-name" autocomplete="name">
+      <span class="contact-error" id="error-name">Bu alan zorunludur.</span>
+    </div>
+    <div class="contact-field">
+      <label for="contact-phone">Telefon *</label>
+      <input type="tel" id="contact-phone" autocomplete="tel">
+      <span class="contact-error" id="error-phone">Bu alan zorunludur.</span>
+    </div>
+    <div class="contact-field">
+      <label for="contact-email">E-posta *</label>
+      <input type="email" id="contact-email" autocomplete="email">
+      <span class="contact-error" id="error-email">Bu alan zorunludur.</span>
+    </div>
+
+    <p id="contact-modal-status" class="contact-modal-status hidden"></p>
+
+    <button type="button" id="contact-modal-submit" class="hero-cta w-full justify-center mt-4">Gönderimi Tamamla</button>
+  </div>
+</div>
 
 <!-- ============ EKİBİMİZ ============ -->
 <section id="ekibimiz" class="py-24 px-6 lg:px-10 bg-white">
@@ -401,79 +448,6 @@
     <p class="mt-8 text-xs text-stone/70 italic text-center">* Başlıklar taslaktır — blog bölümü ileride ayrı sayfa olarak geliştirilecektir.</p>
   </div>
 </section>
-
-<!-- ============ İLETİŞİM CTA ============ -->
-<section id="iletisim" class="py-24 px-6 lg:px-10 bg-white">
-  <div class="max-w-4xl mx-auto text-center">
-    <p class="eyebrow">Bize Ulaşın</p>
-    <h2 class="section-title">Hakkınız İçin İlk Adımı Şimdi Atın</h2>
-    <p class="mt-4 text-stone leading-relaxed max-w-xl mx-auto">
-      Sorunuzu iletin, en kısa sürede size dönüş yapalım.
-    </p>
-  </div>
-
-  <!-- Contact form card -->
-  <div class="mt-10 max-w-2xl mx-auto">
-    <form id="contact-form" class="contact-card" novalidate>
-      <div class="contact-textarea-wrap">
-        <textarea id="contact-message" class="contact-textarea" placeholder="Hukuki sorununuzu kısaca anlatın..." rows="5"></textarea>
-        <button type="button" id="mic-btn" class="mic-btn" aria-label="Sesle yaz" title="Sesle yaz">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Z"/>
-            <path d="M19 11a7 7 0 0 1-14 0"/>
-            <path d="M12 18v3"/>
-          </svg>
-        </button>
-      </div>
-
-      <div id="file-drop" class="file-drop-zone">
-        <input type="file" id="file-input" multiple hidden>
-        <p>Dosya eklemek için tıklayın veya sürükleyin</p>
-      </div>
-      <div id="file-list" class="file-list"></div>
-
-      <button type="submit" class="hero-cta w-full justify-center mt-2">Gönder</button>
-    </form>
-  </div>
-
-  <div class="max-w-4xl mx-auto text-center mt-12">
-    <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a href="tel:+902420000000" class="hero-cta hero-cta--outline">Hemen Arayın</a>
-      <a href="mailto:info@gokcehukuklaw.com" class="hero-cta hero-cta--outline">E-posta Gönderin</a>
-    </div>
-    <p class="mt-6 text-xs text-stone/70 italic">* İletişim bilgileri yer tutucudur — gerçek telefon/e-posta ile güncellenecektir.</p>
-  </div>
-</section>
-
-<!-- ============ İLETİŞİM BİLGİSİ MODAL ============ -->
-<div id="contact-modal-overlay" class="contact-modal-overlay hidden">
-  <div class="contact-modal">
-    <button type="button" id="contact-modal-close" class="contact-modal-close" aria-label="Kapat">&times;</button>
-    <p class="eyebrow">Son Adım</p>
-    <h3 class="font-serif text-xl text-olive-dark">İletişim Bilgileriniz</h3>
-    <p class="mt-2 text-sm text-stone">Talebinizi iletebilmemiz için lütfen bilgilerinizi paylaşın.</p>
-
-    <div class="contact-field">
-      <label for="contact-name">Ad Soyad *</label>
-      <input type="text" id="contact-name" autocomplete="name">
-      <span class="contact-error" id="error-name">Bu alan zorunludur.</span>
-    </div>
-    <div class="contact-field">
-      <label for="contact-phone">Telefon *</label>
-      <input type="tel" id="contact-phone" autocomplete="tel">
-      <span class="contact-error" id="error-phone">Bu alan zorunludur.</span>
-    </div>
-    <div class="contact-field">
-      <label for="contact-email">E-posta *</label>
-      <input type="email" id="contact-email" autocomplete="email">
-      <span class="contact-error" id="error-email">Bu alan zorunludur.</span>
-    </div>
-
-    <p id="contact-modal-status" class="contact-modal-status hidden"></p>
-
-    <button type="button" id="contact-modal-submit" class="hero-cta w-full justify-center mt-4">Gönderimi Tamamla</button>
-  </div>
-</div>
 
 <!-- ============ FOOTER ============ -->
 <footer class="bg-olive-dark text-cream/80 pt-16 pb-8 px-6 lg:px-10">

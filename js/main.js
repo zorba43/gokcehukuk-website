@@ -158,66 +158,17 @@ function initValueAccordion() {
   });
 }
 
-/* ---------- Contact form: textarea + mic + file upload + info modal ---------- */
+/* ---------- Contact form: textarea + file upload + info modal ---------- */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
   const textarea = document.getElementById('contact-message');
-  const micBtn = document.getElementById('mic-btn');
   const dropZone = document.getElementById('file-drop');
   const fileInput = document.getElementById('file-input');
   const fileListEl = document.getElementById('file-list');
 
   let selectedFiles = [];
-
-  /* Speech-to-text via Web Speech API (Chrome/Edge only) */
-  const SpeechRecognitionAPI = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (!SpeechRecognitionAPI) {
-    micBtn.hidden = true;
-  } else {
-    const recognition = new SpeechRecognitionAPI();
-    recognition.lang = 'tr-TR';
-    recognition.continuous = true;
-    recognition.interimResults = true;
-
-    let listening = false;
-    let baseText = '';
-
-    recognition.addEventListener('result', (event) => {
-      let transcript = '';
-      for (let i = 0; i < event.results.length; i++) {
-        transcript += event.results[i][0].transcript;
-      }
-      textarea.value = (baseText + ' ' + transcript).trim();
-    });
-
-    recognition.addEventListener('end', () => {
-      listening = false;
-      micBtn.classList.remove('recording');
-    });
-
-    recognition.addEventListener('error', () => {
-      listening = false;
-      micBtn.classList.remove('recording');
-    });
-
-    micBtn.addEventListener('click', () => {
-      if (listening) {
-        recognition.stop();
-        return;
-      }
-      baseText = textarea.value;
-      listening = true;
-      micBtn.classList.add('recording');
-      try {
-        recognition.start();
-      } catch (err) {
-        listening = false;
-        micBtn.classList.remove('recording');
-      }
-    });
-  }
 
   /* File upload: click, drag & drop, chip list with remove */
   function renderFileList() {
