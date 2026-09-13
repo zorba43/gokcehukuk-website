@@ -266,14 +266,21 @@ function initContactForm() {
     modalStatus.classList.add('hidden');
 
     try {
+      // Not: Web3Forms'un ücretsiz planı dosya eki desteklemiyor (Pro özelliği).
+      // Dosyaların kendisini göndermek yerine, seçilen dosya adlarını mesaja ekliyoruz.
+      let messageText = textarea.value.trim();
+      if (selectedFiles.length > 0) {
+        const fileNames = selectedFiles.map((file) => file.name).join(', ');
+        messageText += `\n\n--- Eklenmek istenen dosyalar (ayrıca e-posta ile iletilmesi gerekir) ---\n${fileNames}`;
+      }
+
       const formData = new FormData();
       formData.append('access_key', WEB3FORMS_ACCESS_KEY);
       formData.append('subject', 'Gökçe Hukuk Danışmanlık — Web Sitesi Formu');
       formData.append('name', nameInput.value.trim());
       formData.append('phone', phoneInput.value.trim());
       formData.append('email', emailInput.value.trim());
-      formData.append('message', textarea.value.trim());
-      selectedFiles.forEach((file) => formData.append('attachment', file));
+      formData.append('message', messageText);
 
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -289,9 +296,14 @@ function initContactForm() {
         renderFileList();
         setTimeout(closeModal, 2200);
       } else {
-        throw new Error(result.message || 'Gönderim başarısız oldu.');
+        console.error('Web3Forms gönderim hatası:', result);
+        modalStatus.textContent = result.message
+          ? `Gönderilemedi: ${result.message}`
+          : 'Gönderilemedi, lütfen tekrar deneyin veya bizi telefonla arayın.';
+        modalStatus.className = 'contact-modal-status error';
       }
     } catch (err) {
+      console.error('Web3Forms isteği başarısız oldu:', err);
       modalStatus.textContent = 'Gönderilemedi, lütfen tekrar deneyin veya bizi telefonla arayın.';
       modalStatus.className = 'contact-modal-status error';
     } finally {
