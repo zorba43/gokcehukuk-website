@@ -526,6 +526,22 @@ html {
   margin: 2rem 0;
 }
 
+/* "Biz Kimiz" — founder biography */
+.biz-bio-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #14351F;
+  margin-bottom: 1.5rem;
+}
+.biz-bio-text {
+  color: #8B8B8B;
+  line-height: 1.7;
+}
+.biz-bio-text + .biz-bio-text {
+  margin-top: 1.25rem;
+}
+
 /* "Biz Kimiz" — founder card (right column) */
 .founder-card {
   border-radius: 10px;
