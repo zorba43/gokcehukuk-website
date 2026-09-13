@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gökçe Hukuk Danışmanlık | Antalya</title>
+<meta name="description" content="Gökçe Hukuk Danışmanlık — Antalya merkezli, trafik kazası, ticaret, ceza ve aile hukuku alanlarında güvenilir hukuki danışmanlık. Kazabildir ile ilk dakikadan yanınızdayız.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind (no-build setup) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          olive: { DEFAULT: '#14351F', dark: '#0B2013', light: '#1F4A2C' },
+          gold: { DEFAULT: '#C9A15A', light: '#DCBF8A', dark: '#A9803F' },
+          cream: '#F5F4F0',
+          stone: '#8B8B8B'
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'Playfair Display', 'serif'],
+          sans: ['Inter', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-cream text-olive-dark font-sans antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex items-center justify-between">
+    <div class="flex items-center gap-4 lg:gap-5">
+      <div class="header-seal" aria-hidden="true">
+        <span class="header-seal-number">10.<span class="sparkle">✦</span></span>
+        <span class="header-seal-label">Yılımız</span>
+      </div>
+      <span class="header-divider"></span>
+      <a href="#hero" class="flex items-center gap-3 group">
+        <img src="assets/logo-icon-only.png" alt="Gökçe Hukuk Danışmanlık" class="h-11 lg:h-[52px] w-auto">
+        <span class="header-wordmark">
+          GÖKÇE HUKUK
+          <span class="header-wordmark-sub">DANIŞMANLIK BÜROSU</span>
+        </span>
+      </a>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-10 font-medium text-sm header-nav-text">
+      <a href="biz-kimiz.html" class="nav-link">Biz Kimiz</a>
+      <a href="#ekibimiz" class="nav-link">Ekibimiz</a>
+      <a href="#hizmetler" class="nav-link">Ne Yapıyoruz</a>
+      <a href="#kazabildir" class="nav-link">Kazabildir</a>
+      <a href="#iletisim" class="nav-link">İletişim</a>
+    </nav>
+
+    <a href="#iletisim" class="hidden lg:inline-flex items-center gap-2 border border-gold text-gold hover:bg-gold hover:text-olive-dark transition-colors duration-300 px-5 py-2.5 rounded-full text-sm font-medium tracking-wide">
+      Ücretsiz Ön Görüşme
+    </a>
+
+    <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 header-nav-text" aria-label="Menüyü aç">
+      <span class="block w-6 h-[1.5px] bg-current"></span>
+      <span class="block w-6 h-[1.5px] bg-current"></span>
+      <span class="block w-4 h-[1.5px] bg-current self-end"></span>
+    </button>
+  </div>
+
+  <!-- Mobile nav panel -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-olive-dark text-cream px-6 pb-8 pt-2">
+    <nav class="flex flex-col gap-1 font-medium">
+      <a href="biz-kimiz.html" class="mobile-nav-link">Biz Kimiz</a>
+      <a href="#ekibimiz" class="mobile-nav-link">Ekibimiz</a>
+      <a href="#hizmetler" class="mobile-nav-link">Ne Yapıyoruz</a>
+      <a href="#kazabildir" class="mobile-nav-link">Kazabildir</a>
+      <a href="#iletisim" class="mobile-nav-link">İletişim</a>
+      <a href="#iletisim" class="mt-4 inline-flex justify-center items-center gap-2 border border-gold text-gold px-5 py-3 rounded-full text-sm font-medium">Ücretsiz Ön Görüşme</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO SLIDER ============ -->
+<section id="hero" class="relative h-screen min-h-[640px] w-full overflow-hidden bg-olive-dark">
+  <div id="hero-slider" class="relative h-full w-full">
+
+    <!-- Slide 1 — Trafik Kazası / Kazabildir -->
+    <div class="hero-slide active" data-index="0">
+      <div class="hero-visual hero-visual--traffic"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Trafik Kazası Hukuku · Kazabildir</p>
+        <h1 class="hero-title">Kaza <em>anında</em>, dosyanız <em>o an</em> açılır.</h1>
+        <p class="hero-subtitle">Kazabildir ile ilk dakikadan itibaren yanınızdayız.</p>
+        <a href="#kazabildir" class="hero-cta">Kazabildir'i Keşfedin</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 — Ticaret Hukuku -->
+    <div class="hero-slide" data-index="1">
+      <div class="hero-visual hero-visual--commerce"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Ticaret Hukuku</p>
+        <h1 class="hero-title">Sözleşmeniz, <em>geleceğiniz</em> kadar sağlam olmalı.</h1>
+        <p class="hero-subtitle">İlk taslaktan imzaya, kurumsal anlaşmalarda yanınızdayız.</p>
+        <a href="#hizmetler" class="hero-cta">Hizmetlerimizi İnceleyin</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 — Ceza Hukuku -->
+    <div class="hero-slide" data-index="2">
+      <div class="hero-visual hero-visual--criminal"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Ceza Hukuku</p>
+        <h1 class="hero-title">Haklarınız, <em>savunulmayı</em> bekleyemez.</h1>
+        <p class="hero-subtitle">Soruşturmanın ilk anından itibaren güçlü bir savunma.</p>
+        <a href="#hizmetler" class="hero-cta">Hizmetlerimizi İnceleyin</a>
+      </div>
+    </div>
+
+    <!-- Slide 4 — Aile Hukuku -->
+    <div class="hero-slide" data-index="3">
+      <div class="hero-visual hero-visual--family"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Aile Hukuku</p>
+        <h1 class="hero-title">Aile, dosyalar içindeki <em>en değerli</em> olandır.</h1>
+        <p class="hero-subtitle">Boşanma ve velayet süreçlerinde hassasiyetle, kararlılıkla.</p>
+        <a href="#hizmetler" class="hero-cta">Hizmetlerimizi İnceleyin</a>
+      </div>
+    </div>
+
+    <!-- Slide 5 — Kazabildir / İnovasyon -->
+    <div class="hero-slide" data-index="4">
+      <div class="hero-visual hero-visual--innovation"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Kazabildir · İnovasyon</p>
+        <h1 class="hero-title">Teknoloji, <em>adaleti</em> hızlandırır.</h1>
+        <p class="hero-subtitle">Geleneksel hukuku dijital çağa taşıyan Kazabildir ile tanışın.</p>
+        <a href="#kazabildir" class="hero-cta">Kazabildir'i Keşfedin</a>
+      </div>
+    </div>
+
+    <!-- Slide 6 — Genel / Deneyim -->
+    <div class="hero-slide" data-index="5">
+      <div class="hero-visual hero-visual--experience"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Gökçe Hukuk Danışmanlık</p>
+        <h1 class="hero-title"><em>10 yıllık</em> deneyim, tek hedef: haklarınız.</h1>
+        <p class="hero-subtitle">Antalya merkezli, güvenilir hukuk danışmanlığı.</p>
+        <a href="#iletisim" class="hero-cta">Bizimle İletişime Geçin</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Film grain (whole hero, above photos, below text/controls) -->
+  <div class="hero-grain"></div>
+
+  <!-- Progress dots -->
+  <div id="hero-dots" class="hero-dots"></div>
+
+
+  <!-- Scroll cue -->
+  <a href="#intro" class="hero-scroll-cue" aria-label="Aşağı kaydır">
+    <span class="hero-scroll-label">Aşağı Kaydırın</span>
+    <svg class="hero-scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M6 9l6 6 6-6"/>
+    </svg>
+  </a>
+</section>
+
+<!-- ============ INTRO + TRUST BADGES ============ -->
+<section id="intro" class="py-24 px-6 lg:px-10 bg-cream">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="eyebrow">Gökçe Hukuk Danışmanlık</p>
+    <h2 class="section-title max-w-3xl mx-auto">
+      Antalya'da köklü bilgiyi, <em>modern</em> ve şeffaf bir hukuk deneyimiyle buluşturuyoruz.
+    </h2>
+    <p class="mt-6 text-stone text-lg max-w-2xl mx-auto leading-relaxed">
+      Trafik kazasından ticari uyuşmazlıklara, aile hukukundan ceza davalarına kadar geniş bir yelpazede;
+      müvekkillerimizin yanında sadece bir avukat değil, güvenilir bir danışman olarak yer alıyoruz.
+    </p>
+
+    <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6">
+      <div class="trust-badge">
+        <span class="trust-number">10+</span>
+        <span class="trust-label">Yıllık Deneyim</span>
+      </div>
+      <div class="trust-badge">
+        <span class="trust-number">500+</span>
+        <span class="trust-label">Sonuçlanan Dosya</span>
+      </div>
+      <div class="trust-badge">
+        <span class="trust-number">Antalya</span>
+        <span class="trust-label">Merkezli Hizmet</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EKİBİMİZ ============ -->
+<section id="ekibimiz" class="py-24 px-6 lg:px-10 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="eyebrow">Kadromuz</p>
+      <h2 class="section-title">Ekibimizle Tanışın</h2>
+      <p class="mt-4 text-stone leading-relaxed">
+        Alanında uzman avukat ve danışmanlardan oluşan ekibimiz, her dosyaya özenle yaklaşır.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto justify-center">
+      <div class="team-card">
+        <div class="team-photo"><img src="assets/a1.jpg" alt="Av. Gökhan Gökçe"></div>
+        <h3 class="team-name">Av. Gökhan Gökçe</h3>
+        <p class="team-title">Kurucu Ortak<span class="team-title-sub">Kaza ve Ticaret Hukuku Uzmanı</span></p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo"><img src="assets/aa.jpg" alt="Av. Meryem Gökçe"></div>
+        <h3 class="team-name">Av. Meryem Gökçe</h3>
+        <p class="team-title">Ceza ve Aile Hukuku Uzmanı</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UZMANLIK ALANLARI ============ -->
+<section id="hizmetler" class="py-24 px-6 lg:px-10 bg-olive text-cream relative overflow-hidden">
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="eyebrow eyebrow--light">Uzmanlık Alanlarımız</p>
+      <h2 class="section-title section-title--light">Hangi Konuda Yanınızdayız?</h2>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3">
+      <span class="service-pill">Trafik Kazası Hukuku</span>
+      <span class="service-pill">Ceza Hukuku</span>
+      <span class="service-pill">Aile Hukuku</span>
+      <span class="service-pill">Ticaret Hukuku</span>
+      <span class="service-pill">İş Hukuku</span>
+      <span class="service-pill">Gayrimenkul Hukuku</span>
+      <span class="service-pill">Miras Hukuku</span>
+      <span class="service-pill">İcra ve İflas Hukuku</span>
+    </div>
+    <p class="mt-10 text-xs text-cream/60 italic text-center">* Liste taslaktır — bürodan alınacak kesin hizmet listesiyle güncellenecektir.</p>
+  </div>
+</section>
+
+<!-- ============ NEDEN BİZ — MÜVEKKİL YORUMLARI ============ -->
+<section id="referanslar" class="py-24 px-6 lg:px-10 bg-cream">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="eyebrow">Neden Bizi Seçmeliler</p>
+    <h2 class="section-title mb-14">Müvekkillerimiz Ne Diyor?</h2>
+
+    <div id="testimonial-slider" class="relative min-h-[220px]">
+      <blockquote class="testimonial active" data-index="0">
+        <p>"Kaza sonrası ilk dakikadan itibaren yanımızdaydılar, süreci hiç yalnız hissetmeden atlattık."</p>
+        <cite>— A.K., Müvekkil</cite>
+      </blockquote>
+      <blockquote class="testimonial" data-index="1">
+        <p>"Ticari sözleşmemizdeki riskleri önceden görüp bizi korudular. Şeffaf ve net bir yaklaşımları var."</p>
+        <cite>— M.T., Kurumsal Müvekkil</cite>
+      </blockquote>
+      <blockquote class="testimonial" data-index="2">
+        <p>"Boşanma sürecinde hem hukuki hem insani anlamda yanımızda oldular. Gerçekten teşekkür ederiz."</p>
+        <cite>— S.Y., Müvekkil</cite>
+      </blockquote>
+    </div>
+
+    <div id="testimonial-dots" class="hero-dots mt-8"></div>
+    <p class="mt-6 text-xs text-stone/70 italic">* Yorumlar taslaktır — gerçek müvekkil onaylı referanslarla değiştirilecektir.</p>
+  </div>
+</section>
+
+<!-- ============ DEĞER ÖNERMELERİ ============ -->
+<section class="py-24 px-6 lg:px-10 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="eyebrow">Yaklaşımımız</p>
+      <h2 class="section-title">Bizi Farklı Kılan Değerler</h2>
+    </div>
+
+    <div id="value-accordion" class="max-w-3xl mx-auto divide-y divide-olive/10 border-t border-b border-olive/10">
+      <div class="value-item active" data-index="0">
+        <button class="value-header">
+          <span>Deneyim</span>
+          <span class="value-icon">+</span>
+        </button>
+        <div class="value-body">
+          <p>10 yılı aşkın süredir edindiğimiz saha tecrübesiyle, her dosyaya öngörülü ve stratejik yaklaşıyoruz.</p>
+        </div>
+      </div>
+      <div class="value-item" data-index="1">
+        <button class="value-header">
+          <span>Müvekkil Odaklılık</span>
+          <span class="value-icon">+</span>
+        </button>
+        <div class="value-body">
+          <p>Her müvekkilimizin hikayesini dinler, çözümü sadece hukuki değil insani boyutuyla da ele alırız.</p>
+        </div>
+      </div>
+      <div class="value-item" data-index="2">
+        <button class="value-header">
+          <span>Şeffaf Ücretlendirme</span>
+          <span class="value-icon">+</span>
+        </button>
+        <div class="value-body">
+          <p>Süreç başlamadan önce net bir ücret ve kapsam anlayışı sunarak sürpriz maliyetlerin önüne geçeriz.</p>
+        </div>
+      </div>
+      <div class="value-item" data-index="3">
+        <button class="value-header">
+          <span>İşbirlikçi Yaklaşım</span>
+          <span class="value-icon">+</span>
+        </button>
+        <div class="value-body">
+          <p>Müvekkillerimizi sürecin her adımında bilgilendirir, kararları birlikte şekillendiririz.</p>
+        </div>
+      </div>
+      <div class="value-item" data-index="4">
+        <button class="value-header">
+          <span>Kazabildir İnovasyonu</span>
+          <span class="value-icon">+</span>
+        </button>
+        <div class="value-body">
+          <p>Geliştirdiğimiz Kazabildir uygulamasıyla, kaza anından itibaren dijital ve hızlı bir destek sunuyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KAZABİLDİR TANITIM ŞERİDİ ============ -->
+<section id="kazabildir" class="py-24 px-6 lg:px-10 bg-olive-dark text-cream relative overflow-hidden">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center relative z-10">
+    <div>
+      <p class="eyebrow eyebrow--light">Kazabildir</p>
+      <h2 class="section-title section-title--light">Teknoloji, <em>adaleti</em> hızlandırır.</h2>
+      <p class="mt-6 text-cream/75 leading-relaxed">
+        Trafik kazası sonrası ilk dakikalar en kritik zamandır. Kazabildir uygulaması ile kaza anında
+        dosyanız otomatik olarak açılır, hukuki süreç gecikmeden başlar. Geleneksel hukuk danışmanlığını
+        dijital çağın hızıyla birleştiriyoruz.
+      </p>
+      <a href="#iletisim" class="hero-cta mt-8 inline-flex">Daha Fazla Bilgi Alın</a>
+    </div>
+    <div class="relative">
+      <div class="kazabildir-mock"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GÜNCEL / GÖRÜŞLER ============ -->
+<section id="guncel" class="py-24 px-6 lg:px-10 bg-cream">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="eyebrow">Güncel</p>
+      <h2 class="section-title">Görüşlerimiz &amp; Gündem</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <article class="article-card">
+        <span class="article-tag">Trafik Kazası Hukuku</span>
+        <h3>Kaza sonrası ilk 24 saatte yapılması gerekenler</h3>
+        <p>Delillerin korunmasından bildirim sürecine, hak kaybını önlemek için kritik adımlar.</p>
+        <span class="article-more">Yakında →</span>
+      </article>
+      <article class="article-card">
+        <span class="article-tag">Ticaret Hukuku</span>
+        <h3>Kurumsal sözleşmelerde sık yapılan 5 hata</h3>
+        <p>İmzadan önce fark edilmesi gereken riskli maddeler ve nasıl önlenecekleri.</p>
+        <span class="article-more">Yakında →</span>
+      </article>
+      <article class="article-card">
+        <span class="article-tag">Aile Hukuku</span>
+        <h3>Velayet süreçlerinde çocuğun üstün yararı</h3>
+        <p>Mahkemelerin velayet kararlarında dikkate aldığı temel kriterler.</p>
+        <span class="article-more">Yakında →</span>
+      </article>
+    </div>
+    <p class="mt-8 text-xs text-stone/70 italic text-center">* Başlıklar taslaktır — blog bölümü ileride ayrı sayfa olarak geliştirilecektir.</p>
+  </div>
+</section>
+
+<!-- ============ İLETİŞİM CTA ============ -->
+<section id="iletisim" class="py-24 px-6 lg:px-10 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="eyebrow">Bize Ulaşın</p>
+    <h2 class="section-title">Hakkınız İçin İlk Adımı Şimdi Atın</h2>
+    <p class="mt-4 text-stone leading-relaxed max-w-xl mx-auto">
+      Sorunuzu iletin, en kısa sürede size dönüş yapalım.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="tel:+902420000000" class="hero-cta">Hemen Arayın</a>
+      <a href="mailto:info@gokcehukuklaw.com" class="hero-cta hero-cta--outline">E-posta Gönderin</a>
+    </div>
+    <p class="mt-6 text-xs text-stone/70 italic">* İletişim bilgileri yer tutucudur — gerçek telefon/e-posta ile güncellenecektir.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-olive-dark text-cream/80 pt-16 pb-8 px-6 lg:px-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div>
+      <div class="mb-4">
+        <img src="assets/logo-trimmed.png" alt="Gökçe Hukuk Danışmanlık" class="h-16 w-auto">
+      </div>
+      <p class="text-sm text-cream/60 leading-relaxed">Antalya merkezli, güvenilir hukuk danışmanlığı.</p>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">Kurumsal</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="biz-kimiz.html" class="footer-link">Biz Kimiz</a></li>
+        <li><a href="#hizmetler" class="footer-link">Hizmet Alanlarımız</a></li>
+        <li><a href="#kazabildir" class="footer-link">Kazabildir</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">İletişim</h4>
+      <ul class="space-y-2 text-sm text-cream/60">
+        <li>Antalya, Türkiye <em class="not-italic text-cream/40">(adres eklenecek)</em></li>
+        <li>+90 242 000 00 00 <em class="not-italic text-cream/40">(taslak)</em></li>
+        <li>info@gokcehukuklaw.com</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">Sosyal Medya</h4>
+      <div class="flex gap-3">
+        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+        <a href="#" class="social-icon" aria-label="LinkedIn">IN</a>
+        <a href="#" class="social-icon" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto border-t border-cream/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs text-cream/40">
+    <p>&copy; 2026 Gökçe Hukuk Danışmanlık. Tüm hakları saklıdır.</p>
+    <p>Kazabildir bir Gökçe Hukuk Danışmanlık girişimidir.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

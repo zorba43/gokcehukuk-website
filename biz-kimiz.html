@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biz Kimiz | Gökçe Hukuk Danışmanlık</title>
+<meta name="description" content="Gökçe Hukuk Danışmanlık'ın hikayesi, misyonu, vizyonu ve kurucu ortağı Av. Gökhan Gökçe hakkında.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind (no-build setup) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          olive: { DEFAULT: '#14351F', dark: '#0B2013', light: '#1F4A2C' },
+          gold: { DEFAULT: '#C9A15A', light: '#DCBF8A', dark: '#A9803F' },
+          cream: '#F5F4F0',
+          stone: '#8B8B8B'
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'Playfair Display', 'serif'],
+          sans: ['Inter', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-cream text-olive-dark font-sans antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex items-center justify-between">
+    <div class="flex items-center gap-4 lg:gap-5">
+      <div class="header-seal" aria-hidden="true">
+        <span class="header-seal-number">10.<span class="sparkle">✦</span></span>
+        <span class="header-seal-label">Yılımız</span>
+      </div>
+      <span class="header-divider"></span>
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/logo-icon-only.png" alt="Gökçe Hukuk Danışmanlık" class="h-11 lg:h-[52px] w-auto">
+        <span class="header-wordmark">
+          GÖKÇE HUKUK
+          <span class="header-wordmark-sub">DANIŞMANLIK BÜROSU</span>
+        </span>
+      </a>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-10 font-medium text-sm header-nav-text">
+      <a href="biz-kimiz.html" class="nav-link">Biz Kimiz</a>
+      <a href="index.html#ekibimiz" class="nav-link">Ekibimiz</a>
+      <a href="index.html#hizmetler" class="nav-link">Ne Yapıyoruz</a>
+      <a href="index.html#kazabildir" class="nav-link">Kazabildir</a>
+      <a href="index.html#iletisim" class="nav-link">İletişim</a>
+    </nav>
+
+    <a href="index.html#iletisim" class="hidden lg:inline-flex items-center gap-2 border border-gold text-gold hover:bg-gold hover:text-olive-dark transition-colors duration-300 px-5 py-2.5 rounded-full text-sm font-medium tracking-wide">
+      Ücretsiz Ön Görüşme
+    </a>
+
+    <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 header-nav-text" aria-label="Menüyü aç">
+      <span class="block w-6 h-[1.5px] bg-current"></span>
+      <span class="block w-6 h-[1.5px] bg-current"></span>
+      <span class="block w-4 h-[1.5px] bg-current self-end"></span>
+    </button>
+  </div>
+
+  <!-- Mobile nav panel -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-olive-dark text-cream px-6 pb-8 pt-2">
+    <nav class="flex flex-col gap-1 font-medium">
+      <a href="biz-kimiz.html" class="mobile-nav-link">Biz Kimiz</a>
+      <a href="index.html#ekibimiz" class="mobile-nav-link">Ekibimiz</a>
+      <a href="index.html#hizmetler" class="mobile-nav-link">Ne Yapıyoruz</a>
+      <a href="index.html#kazabildir" class="mobile-nav-link">Kazabildir</a>
+      <a href="index.html#iletisim" class="mobile-nav-link">İletişim</a>
+      <a href="index.html#iletisim" class="mt-4 inline-flex justify-center items-center gap-2 border border-gold text-gold px-5 py-3 rounded-full text-sm font-medium">Ücretsiz Ön Görüşme</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="relative h-[58vh] min-h-[500px] w-full overflow-hidden bg-olive-dark">
+  <div class="biz-hero-visual"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grain"></div>
+  <div class="biz-hero-content">
+    <div class="biz-hero-title">
+      <span class="biz-hero-word biz-hero-word--accent">BiZ</span>
+      <span class="biz-hero-word biz-hero-word--solid">KiMiZ</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BİZ KİMİZ İÇERİK ============ -->
+<section class="py-24 px-6 lg:px-10 bg-cream">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-[3fr_2fr] gap-14 lg:gap-20 items-start">
+    <div>
+      <h1 class="biz-lead-title">Antalya'da Güvenilir Hukuk Danışmanlığı</h1>
+
+      <h3 class="biz-subheading">Misyonumuz</h3>
+      <p class="mt-3 text-stone leading-relaxed">
+        Hukuki süreçlerin karmaşık dilini sadeleştirerek, müvekkillerimize her adımda ne olduğunu net bir
+        şekilde anlatmayı; haklarını en güçlü şekilde savunurken şeffaf ve öngörülebilir bir deneyim
+        sunmayı görev ediniyoruz.
+      </p>
+
+      <hr class="biz-divider">
+
+      <h3 class="biz-subheading">Felsefemiz</h3>
+      <p class="mt-3 text-stone leading-relaxed">
+        Her dosyayı bir hukuki süreçten önce bir insan hikayesi olarak ele alıyoruz. Deneyim,
+        müvekkil odaklılık ve Kazabildir ile hayata geçirdiğimiz teknolojik yaklaşım; on yılı aşkın
+        süredir bize rehberlik eden değerler oldu.
+      </p>
+    </div>
+
+    <div class="founder-card">
+      <div class="founder-card-label">Kurucu Ortak</div>
+      <div class="founder-card-photo">
+        <img src="assets/kurucu.jpg" alt="Av. Gökhan Gökçe">
+        <div class="founder-card-name-overlay">
+          <span class="founder-card-name">Av. Gökhan Gökçe</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-olive-dark text-cream/80 pt-16 pb-8 px-6 lg:px-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div>
+      <div class="mb-4">
+        <img src="assets/logo-trimmed.png" alt="Gökçe Hukuk Danışmanlık" class="h-16 w-auto">
+      </div>
+      <p class="text-sm text-cream/60 leading-relaxed">Antalya merkezli, güvenilir hukuk danışmanlığı.</p>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">Kurumsal</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="biz-kimiz.html" class="footer-link">Biz Kimiz</a></li>
+        <li><a href="index.html#hizmetler" class="footer-link">Hizmet Alanlarımız</a></li>
+        <li><a href="index.html#kazabildir" class="footer-link">Kazabildir</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">İletişim</h4>
+      <ul class="space-y-2 text-sm text-cream/60">
+        <li>Antalya, Türkiye <em class="not-italic text-cream/40">(adres eklenecek)</em></li>
+        <li>+90 242 000 00 00 <em class="not-italic text-cream/40">(taslak)</em></li>
+        <li>info@gokcehukuklaw.com</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">Sosyal Medya</h4>
+      <div class="flex gap-3">
+        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+        <a href="#" class="social-icon" aria-label="LinkedIn">IN</a>
+        <a href="#" class="social-icon" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto border-t border-cream/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs text-cream/40">
+    <p>&copy; 2026 Gökçe Hukuk Danışmanlık. Tüm hakları saklıdır.</p>
+    <p>Kazabildir bir Gökçe Hukuk Danışmanlık girişimidir.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
