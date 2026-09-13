@@ -849,6 +849,24 @@ html {
   color: #C9A15A;
 }
 
+/* CTA strip — between stats and team, links down to the contact form */
+.cta-strip {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(201,161,90,0.14), transparent 55%),
+    linear-gradient(160deg, #14351F 0%, #0B2013 100%);
+  padding: 4rem 1.5rem;
+}
+@media (min-width: 1024px) {
+  .cta-strip { padding: 4.5rem 2.5rem; }
+}
+.cta-strip-title {
+  font-family: 'Fraunces', 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: clamp(1.75rem, 3vw, 2rem);
+  line-height: 1.35;
+  color: #F5F4F0;
+}
+
 /* ---------- Contact form ---------- */
 .contact-card {
   background: #F5F4F0;

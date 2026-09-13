@@ -341,7 +341,7 @@ function initContactForm() {
         throw new Error(result.message || 'Gönderim başarısız oldu.');
       }
     } catch (err) {
-      modalStatus.textContent = 'Gönderim sırasında bir sorun oluştu. Lütfen telefon veya e-posta ile ulaşın.';
+      modalStatus.textContent = 'Gönderilemedi, lütfen tekrar deneyin veya bizi telefonla arayın.';
       modalStatus.className = 'contact-modal-status error';
     } finally {
       modalSubmit.disabled = false;
