@@ -191,6 +191,11 @@ html {
   padding: 0.9rem 1.9rem;
   border-radius: 999px;
   transition: background 0.3s ease, transform 0.3s ease;
+}
+/* Only hero-slide CTAs start hidden — they're revealed by the .hero-rise animation.
+   Every other reuse of .hero-cta (contact form, Kazabildir, quick-contact buttons)
+   must stay visible by default since they never enter a .hero-slide.active context. */
+.hero-slide .hero-cta {
   opacity: 0;
   transform: translateY(16px);
 }
@@ -202,6 +207,12 @@ html {
   background: transparent;
   border: 1px solid #C9A15A;
   color: #C9A15A;
+}
+.hero-cta.contact-submit-btn {
+  width: 100%;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 0.5rem;
 }
 .hero-cta--outline:hover {
   background: #C9A15A;
@@ -871,6 +882,12 @@ html {
   font-weight: 500;
   color: #C9A15A;
 }
+.cta-strip-desc {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(245,244,240,0.72);
+}
 
 /* ---------- Contact form ---------- */
 .contact-card {
@@ -907,6 +924,7 @@ html {
 }
 
 .file-drop-zone {
+  position: relative;
   margin-top: 1rem;
   border: 1.5px dashed rgba(20,53,31,0.25);
   border-radius: 0.85rem;
@@ -916,6 +934,22 @@ html {
   color: #8B8B8B;
   cursor: pointer;
   transition: border-color 0.25s ease, background 0.25s ease;
+}
+/* Kept in the layout (not display:none) so the drop zone's programmatic
+   fileInput.click() reliably opens the native file picker in every browser.
+   Sized to 1px and clipped, not display:none, since some browsers refuse
+   to open the picker from a JS .click() on a display:none input. */
+.file-input-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  opacity: 0;
 }
 .file-drop-zone:hover,
 .file-drop-zone.dragover {

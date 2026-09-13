@@ -212,28 +212,35 @@
 
 <!-- ============ İLETİŞİM / SORUNUZU BİLDİRİN ============ -->
 <section id="iletisim" class="cta-strip">
-  <div class="max-w-2xl mx-auto text-center">
-    <h2 class="cta-strip-title">
-      Sorununuzu <em>bildirin</em>, ön inceleme yapıp size 24 saat içerisinde dönüş sağlayalım.
-    </h2>
+  <div class="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-    <form id="contact-form" class="contact-card mt-8 text-left" novalidate>
+    <div class="text-left">
+      <h2 class="cta-strip-title">
+        Sorununuzu <em>bildirin</em>, ön inceleme yapıp size 24 saat içerisinde dönüş sağlayalım.
+      </h2>
+      <p class="cta-strip-desc">
+        Artık kilometrelerce öteden büroya gelmenize gerek yok. Günümüzün dijital çağında her şeyi
+        dijital ortamlarda yürütüyor, size en kısa sürede dönüş sağlıyoruz. Ön inceleme için herhangi
+        bir ücret talep etmiyoruz.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="tel:+902420000000" class="hero-cta hero-cta--outline">Hemen Arayın</a>
+        <a href="mailto:info@gokcehukuklaw.com" class="hero-cta hero-cta--outline">E-posta Gönderin</a>
+      </div>
+    </div>
+
+    <form id="contact-form" class="contact-card text-left" novalidate>
       <textarea id="contact-message" class="contact-textarea" placeholder="Hukuki sorununuzu kısaca anlatın..." rows="5"></textarea>
 
       <div id="file-drop" class="file-drop-zone">
-        <input type="file" id="file-input" multiple hidden>
+        <input type="file" id="file-input" multiple class="file-input-visually-hidden">
         <p>Dosya eklemek için tıklayın veya sürükleyin</p>
       </div>
       <div id="file-list" class="file-list"></div>
 
-      <button type="submit" class="hero-cta w-full justify-center mt-2">Gönder</button>
+      <button type="submit" class="hero-cta contact-submit-btn">Gönder</button>
     </form>
 
-    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-      <a href="tel:+902420000000" class="hero-cta hero-cta--outline">Hemen Arayın</a>
-      <a href="mailto:info@gokcehukuklaw.com" class="hero-cta hero-cta--outline">E-posta Gönderin</a>
-    </div>
-    <p class="mt-6 text-xs text-cream/50 italic">* İletişim bilgileri yer tutucudur — gerçek telefon/e-posta ile güncellenecektir.</p>
   </div>
 </section>
 
