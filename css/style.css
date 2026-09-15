@@ -840,6 +840,7 @@ html {
   border: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0 30px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04) inset;
   position: relative;
+  overflow: hidden;
 }
 /* Dynamic Island */
 .kazabildir-mock::before {
@@ -867,17 +868,6 @@ html {
   background: rgba(255,255,255,0.6);
   z-index: 2;
 }
-/* Yan tuşlar (opsiyonel gerçekçilik detayı) */
-.kazabildir-mock-btn {
-  position: absolute;
-  background: #1a1a1a;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-.kazabildir-mock-btn--mute { top: 92px; left: -3px; width: 3px; height: 22px; border-radius: 2px 0 0 2px; }
-.kazabildir-mock-btn--vol-up { top: 130px; left: -3px; width: 3px; height: 38px; border-radius: 2px 0 0 2px; }
-.kazabildir-mock-btn--vol-down { top: 176px; left: -3px; width: 3px; height: 38px; border-radius: 2px 0 0 2px; }
-.kazabildir-mock-btn--power { top: 140px; right: -3px; width: 3px; height: 52px; border-radius: 0 2px 2px 0; }
-
 .kazabildir-mock-screen {
   position: absolute;
   inset: 12px;
