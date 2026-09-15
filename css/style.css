@@ -832,33 +832,61 @@ html {
 
 /* Kazabildir mockup */
 .kazabildir-mock {
-  aspect-ratio: 9 / 16;
-  max-width: 320px;
+  aspect-ratio: 9 / 19.5;
+  max-width: 300px;
   margin: 0 auto;
-  border-radius: 2rem;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(201,161,90,0.35), transparent 50%),
-    linear-gradient(160deg, #1F4A2C, #0B2013);
-  border: 1px solid rgba(245,244,240,0.1);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  border-radius: 3rem;
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04) inset;
   position: relative;
 }
+/* Dynamic Island */
 .kazabildir-mock::before {
   content: "";
   position: absolute;
-  top: 1.5rem; left: 1.5rem; right: 1.5rem;
-  height: 0.5rem;
-  border-radius: 999px;
-  background: rgba(201,161,90,0.5);
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 28px;
+  border-radius: 20px;
+  background: #000;
+  z-index: 2;
 }
+/* Home indicator */
 .kazabildir-mock::after {
   content: "";
   position: absolute;
-  bottom: 2rem; left: 1.5rem; right: 1.5rem;
-  height: 3rem;
-  border-radius: 0.75rem;
-  background: rgba(245,244,240,0.08);
-  border: 1px solid rgba(245,244,240,0.15);
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.6);
+  z-index: 2;
+}
+/* Yan tuşlar (opsiyonel gerçekçilik detayı) */
+.kazabildir-mock-btn {
+  position: absolute;
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.kazabildir-mock-btn--mute { top: 92px; left: -3px; width: 3px; height: 22px; border-radius: 2px 0 0 2px; }
+.kazabildir-mock-btn--vol-up { top: 130px; left: -3px; width: 3px; height: 38px; border-radius: 2px 0 0 2px; }
+.kazabildir-mock-btn--vol-down { top: 176px; left: -3px; width: 3px; height: 38px; border-radius: 2px 0 0 2px; }
+.kazabildir-mock-btn--power { top: 140px; right: -3px; width: 3px; height: 52px; border-radius: 0 2px 2px 0; }
+
+.kazabildir-mock-screen {
+  position: absolute;
+  inset: 12px;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 2.25rem;
+  z-index: 1;
 }
 
 /* Article cards */
