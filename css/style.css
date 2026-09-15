@@ -688,17 +688,73 @@ html {
 }
 
 /* Service pills */
-.service-pill {
-  border: 1px solid rgba(245,244,240,0.25);
-  color: #F5F4F0;
-  font-size: 0.85rem;
-  padding: 0.65rem 1.4rem;
-  border-radius: 999px;
-  transition: background 0.25s ease, border-color 0.25s ease;
+/* Uzmanlık alanları — sekme (tab) grubu */
+.service-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
 }
-.service-pill:hover {
-  background: rgba(201,161,90,0.15);
+.service-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(245,244,240,0.25);
+  border-radius: 999px;
+  color: rgba(245,244,240,0.75);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+.service-tab-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.service-tab:hover {
   border-color: #C9A15A;
+  color: #F5F4F0;
+}
+.service-tab.active {
+  background: #C9A15A;
+  border-color: #C9A15A;
+  color: #0B2013;
+}
+
+.service-panels {
+  position: relative;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+.service-panel {
+  display: none;
+  text-align: center;
+  animation: service-panel-fade 0.4s ease;
+}
+.service-panel.active {
+  display: block;
+}
+@keyframes service-panel-fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.service-panel-title {
+  font-family: 'Fraunces', 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #F5F4F0;
+  margin-bottom: 1.25rem;
+}
+.service-panel-title em {
+  font-style: italic;
+  color: #DCBF8A;
+}
+.service-panel-text {
+  color: rgba(245,244,240,0.75);
+  line-height: 1.7;
+  font-size: 1.05rem;
 }
 
 /* Testimonials */

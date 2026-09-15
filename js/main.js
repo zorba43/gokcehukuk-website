@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTestimonialSlider();
   initValueAccordion();
   initContactForm();
+  initServiceTabs();
 });
 
 const WEB3FORMS_ACCESS_KEY = '24d7fbe7-d5ac-4017-be15-9fa0c67e3b67';
@@ -154,6 +155,25 @@ function initValueAccordion() {
       const isActive = item.classList.contains('active');
       items.forEach((i) => i.classList.remove('active'));
       if (!isActive) item.classList.add('active');
+    });
+  });
+}
+
+/* ---------- Uzmanlık alanları: sekme (tab) grubu ---------- */
+function initServiceTabs() {
+  const root = document.getElementById('service-tabs');
+  const panelsRoot = document.getElementById('service-panels');
+  if (!root || !panelsRoot) return;
+
+  const tabs = Array.from(root.querySelectorAll('.service-tab'));
+  const panels = Array.from(panelsRoot.querySelectorAll('.service-panel'));
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const index = tab.dataset.index;
+      tabs.forEach((t) => t.classList.remove('active'));
+      tab.classList.add('active');
+      panels.forEach((p) => p.classList.toggle('active', p.dataset.index === index));
     });
   });
 }
